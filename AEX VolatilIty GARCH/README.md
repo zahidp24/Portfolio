@@ -2,7 +2,7 @@
 
 Does bad news move the Dutch stock market's volatility more than good news? This project models the daily volatility of the **Amsterdam Exchange Index (AEX)** from 2010 to 2023 and tests whether an asymmetric GJR-GARCH model describes it better than a standard GARCH(1,1).
 
-📄 **[Read the full paper (PDF)](paper/AEX_volatility_GARCH_paper.pdf)** · Applied Econometrics term paper, Institute of Economic Studies, Charles University (May 2026)
+📄 **[Read the full paper (PDF)](paper/AEX_volatility_GARCH_paper.pdf)**
 
 ![News impact curve](figures/04_news_impact_curve.png)
 
@@ -18,8 +18,7 @@ Does bad news move the Dutch stock market's volatility more than good news? This
 - **Source:** Yahoo Finance, ticker `^AEX`, daily closing prices
 - **Period:** 4 January 2010 to 6 March 2023
 - **Size:** 3,374 prices → 3,373 daily log returns (one missing holiday price removed)
-
-See [`data/README.md`](data/README.md) for how to get the file.
+- **File:** [`data/AEX.csv`](data/AEX.csv), included in the repo, so the analysis runs as is
 
 ## Methods
 
