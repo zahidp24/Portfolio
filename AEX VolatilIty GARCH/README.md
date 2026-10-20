@@ -18,7 +18,7 @@ Does bad news move the Dutch stock market's volatility more than good news? This
 - **Source:** Yahoo Finance, ticker `^AEX`, daily closing prices
 - **Period:** 4 January 2010 to 6 March 2023
 - **Size:** 3,374 prices → 3,373 daily log returns (one missing holiday price removed)
-- **File:** [`data/AEX.csv`](data/AEX.csv), included in the repo, so the analysis runs as is
+- **File:** [`data/AEX.csv`](data/^AEX.csv), included in the repo, so the analysis runs as is
 
 ## Methods
 
