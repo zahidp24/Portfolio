@@ -4,7 +4,7 @@ Does bad news move the Dutch stock market's volatility more than good news? This
 
 📄 **[Read the full paper (PDF)](paper/AEX_volatility_GARCH_paper.pdf)** · Applied Econometrics term paper, Institute of Economic Studies, Charles University (May 2026)
 
-![News impact curve](/figures/04_news_impact_curve.png)
+![News impact curve](figures/04_news_impact_curve.png)
 
 ## Key findings
 
@@ -35,7 +35,7 @@ See [`data/README.md`](data/README.md) for how to get the file.
 | GARCH(1,1) Student-t | -6.3862 | -6.3771 | 0.987 |
 | **GJR-GARCH(1,1) Student-t** | **-6.3903** | **-6.3793** | **0.984** |
 
-![Conditional volatility](outputs/figures/03_conditional_volatility.png)
+![Conditional volatility](figures/03_conditional_volatility.png)
 
 ## Repository structure
 
@@ -72,6 +72,6 @@ R · rugarch · forecast · tseries · tidyverse · xts
 
 ## Authors
 
-**Zahid Pashayev** · [LinkedIn](https://www.linkedin.com/in/YOUR-PROFILE)
+**Zahid Pashayev** · [LinkedIn](https://www.linkedin.com/in/zahid-pashayev)
 
 Co-author: Maxim Milde
