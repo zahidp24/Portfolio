@@ -1,14 +1,54 @@
-## **What does the project do?**
-This project analyzes and forecasts the realized volatility of a financial asset (Asset 12) using 1,500 daily observations from January 2010 to January 2016. It implements and compares six volatility models — AR, HAR, HAR-RS (with semi-volatility), HAR-RS-RK (with realized skewness and kurtosis), Realized GARCH, and ARMA-GARCH — evaluating them both in-sample (R², coefficient significance) and out-of-sample (MSE, MAE, Diebold-Mariano tests, Mincer-Zarnowitz regressions) under expanding and rolling window schemes. The analysis is written in R as a Jupyter Notebook.
+# Analysis & Forecast of Stock Volatility
 
-## **Why the project is useful?**
-It provides a practical, end-to-end framework for comparing realized volatility forecasting models - from data exploration and descriptive statistics through model estimation, diagnostic testing, and rigorous out-of-sample evaluation. It demonstrates how incorporating higher-frequency information (semi-volatility, skewness, kurtosis) improves forecasts over standard return-based GARCH models, which is relevant for risk management, portfolio allocation, and derivative pricing. The project also illustrates important econometric practices like Newey-West standard error correction, forecast efficiency testing, and formal model comparison via the Diebold-Mariano test.
+Can high-frequency data predict tomorrow's volatility better than standard GARCH models? This project compares six models for forecasting the realized volatility of a stock, using 1,500 daily observations from January 2010 to January 2016.
 
-## **How users can get started?**
-Users need R with the following packages: xts, forecast, rugarch, lmtest, and sandwich. The dataset (12.RData) should be placed in a data_project/ subdirectory. The notebook can be run cell-by-cell in Jupyter with an R kernel (IRkernel), or the code can be extracted and run in RStudio. No additional configuration is needed; all model estimation, evaluation, and visualization is self-contained in the notebook.
+📓 **[View the notebook](Stock_Volatility_Analysis_Forecast.ipynb)**
 
-## **Where users can get help?**
-Users can open an issue on the GitHub repository for questions or bug reports. For methodological background, the notebook references key academic papers: Corsi (2009) on the HAR model, Hansen, Huang & Shek (2012) on Realized GARCH, Patton & Sheppard (2015) on signed jumps and semivariance decomposition, and Todorova (2017) on asymmetric volatility. The rugarch package documentation is also a useful resource for the GARCH-family implementations.
+## Key findings
 
-## **Who maintains and contributes?**
-The project is authored and maintained by Zahid Pashayev.
+- **Models using high-frequency information forecast best.** Adding semi-volatility, realized skewness and kurtosis improves forecasts over standard return-based GARCH models.
+- **Forecasts were tested out of sample**, using both expanding and rolling windows, and compared formally with Diebold-Mariano tests.
+
+## Data
+
+- **1,500 daily observations** of realized volatility measures for one asset (Asset 12), January 2010 to January 2016
+- **File:** [`12.RData`](12.RData)
+
+## Models compared
+
+1. AR
+2. HAR (Corsi, 2009)
+3. HAR-RS, adding semi-volatility
+4. HAR-RS-RK, adding realized skewness and kurtosis
+5. Realized GARCH (Hansen, Huang & Shek, 2012)
+6. ARMA-GARCH
+
+## Evaluation
+
+- **In sample:** R², coefficient significance with Newey-West standard errors
+- **Out of sample:** MSE, MAE, Diebold-Mariano tests, Mincer-Zarnowitz regressions
+
+## Files
+
+| File | Description |
+|---|---|
+| `Stock_Volatility_Analysis_Forecast.ipynb` | Full analysis (R notebook) |
+| `Stock_Volatility_Analysis_Forecast.html` | Same notebook as a web page, for viewing without Jupyter |
+| `12.RData` | Dataset |
+
+## How to reproduce
+
+1. Install the R packages:
+```r
+   install.packages(c("xts", "forecast", "rugarch", "lmtest", "sandwich"))
+```
+2. Open the notebook in Jupyter with an R kernel (IRkernel), or copy the code into RStudio.
+3. Run all cells.
+
+## Tools
+
+R · Jupyter · rugarch · HAR models · forecast evaluation
+
+## Author
+
+**Zahid Pashayev** · [LinkedIn](https://www.linkedin.com/in/zahid-pashayev)
