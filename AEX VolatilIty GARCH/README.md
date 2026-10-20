@@ -40,13 +40,12 @@ See [`data/README.md`](data/README.md) for how to get the file.
 ## Repository structure
 
 ```
-├── README.md
+├── README.md                             data source and description
 ├── paper/
 │   └── AEX_volatility_GARCH_paper.pdf    full term paper
 ├── R/
 │   └── AEX_script.R                      full analysis: tests, models, figures
 ├── data/
-│   ├── README.md                         data source and description
 │   └── AEX.csv                           daily AEX prices
 └── figures/                              charts used in the paper
     ├── 01_aex_close_price.png
@@ -63,8 +62,7 @@ See [`data/README.md`](data/README.md) for how to get the file.
    install.packages(c("tidyverse", "tseries", "xts", "forecast",
                       "moments", "aTSA", "rugarch", "quantmod"))
    ```
-3. If `data/AEX.csv` is missing, run `R/00_download_data.R`.
-4. Run `R/01_analysis.R`. Results print to the console and figures are saved to `outputs/figures/`.
+3. Run `AEX_script.R`. Results print to the console and figures are saved to `figures/`.
 
 ## Tools
 
