@@ -4,7 +4,7 @@ Does bad news move the Dutch stock market's volatility more than good news? This
 
 📄 **[Read the full paper (PDF)](paper/AEX_volatility_GARCH_paper.pdf)** · Applied Econometrics term paper, Institute of Economic Studies, Charles University (May 2026)
 
-![News impact curve](outputs/figures/04_news_impact_curve.png)
+![News impact curve](/figures/04_news_impact_curve.png)
 
 ## Key findings
 
@@ -44,13 +44,15 @@ See [`data/README.md`](data/README.md) for how to get the file.
 ├── paper/
 │   └── AEX_volatility_GARCH_paper.pdf    full term paper
 ├── R/
-│   ├── 00_download_data.R                downloads AEX prices from Yahoo Finance
-│   └── 01_analysis.R                     full analysis: tests, models, figures
+│   └── AEX_script.R                      full analysis: tests, models, figures
 ├── data/
 │   ├── README.md                         data source and description
 │   └── AEX.csv                           daily AEX prices
-└── outputs/
-    └── figures/                          charts used in the paper
+└── figures/                              charts used in the paper
+    ├── 01_aex_close_price.png
+    ├── 02_log_returns.png
+    ├── 03_conditional_volatility.png
+    └── 04_news_impact_curve.png
 ```
 
 ## How to reproduce
