@@ -1,25 +1,46 @@
-## Clustering Analysis of 2020 Daily Stock Returns
- 
-How do stocks move together during a crisis? This project uses cluster analysis to group 22 publicly traded stocks based on how their daily returns co-moved throughout 2020 — a year shaped by the COVID-19 pandemic, vaccine races, and some truly wild one-off events (looking at you, Kodak).
- 
-## What This Project Does
- 
-Starting from 251 trading days of daily return data, the project computes pairwise Pearson correlations between all 22 stocks and converts them into a dissimilarity matrix. Five different clustering methods are then applied to see which stocks naturally group together:
- 
-- **Average, Complete, and Single Linkage** — using correlation-based dissimilarity (1 − r)
-- **Ward's Method** — using chord distance to satisfy its Euclidean requirement
-- **PAM (Partitioning Around Medoids)** — a non-hierarchical method used to cross-validate the hierarchical results
-The analysis walks through choosing the right number of clusters (silhouette analysis), evaluating how well each method preserves the original distance structure (cophenetic correlations), and visualizing the results with dendrograms, heatmaps, and multidimensional scaling (MDS) plots.
- 
-The punchline: all five methods converge on the same five-cluster solution — cyclical/industrial stocks (banking, energy, chemicals), large pharma, big tech, and two singleton outliers (Moderna and Kodak), each driven by its own idiosyncratic story.
- 
-## Why This Project Is Useful
- 
-- It's a clean, end-to-end example of unsupervised learning applied to real financial data — from raw returns to interpretable clusters.
-- It shows how to properly handle correlation-based distances in clustering, including why Ward's method needs the chord distance transformation rather than raw (1 − r).
-- The COVID-19 context makes the results intuitive: you can see how pandemic dynamics (market-wide sell-offs, vaccine speculation, a meme-stock-style event) show up in the correlation structure.
-- It compares multiple clustering approaches side by side and demonstrates how to use silhouette widths, cophenetic correlations, and MDS to validate and communicate your results.
- 
+# Clustering Analysis of 2020 Daily Stock Returns
+
+How do stocks move together during a crisis? This project groups 22 stocks by how their daily returns moved together in 2020, the year of the COVID-19 crash, the vaccine race and the Kodak spike.
+
+📄 **[Read the full report (PDF)](Clustering%20Analysis.pdf)**
+
+## Key findings
+
+- **All five clustering methods agree on the same five clusters**, which makes the result robust rather than a quirk of one method.
+- **Three sector groups:** cyclical stocks (banking, energy, chemicals), large pharma, and big tech.
+- **Two outliers, each with its own story:** Moderna, driven by vaccine news, and Kodak, driven by a one-off speculative spike.
+
+## Data
+
+- **251 trading days** of daily returns for **22 stocks** in 2020
+- **File:** [`daily_stock_returns_2020.dat`](daily_stock_returns_2020.dat)
+
+## Methods
+
+1. Pearson correlations between all stocks, converted into a distance (1 − r)
+2. Hierarchical clustering: average, complete and single linkage
+3. Ward's method, using chord distance because Ward requires Euclidean distances
+4. PAM (k-medoids) as a non-hierarchical cross-check
+5. Number of clusters chosen with silhouette analysis; methods compared with cophenetic correlations
+6. Results shown with dendrograms, heatmaps and MDS plots
+
+## Files
+
+| File | Description |
+|---|---|
+| `Clustering_Analysis.R` | Full analysis code |
+| `daily_stock_returns_2020.dat` | Daily return data |
+| `Clustering Analysis.pdf` | Full report with all figures |
+
+## How to reproduce
+
+1. Clone the repo and open R in this folder.
+2. Run `Clustering_Analysis.R`.
+
+## Tools
+
+R · hierarchical clustering · PAM · silhouette analysis · MDS
+
 ## Author
- 
-**Zahid Pashayev** — project author and maintainer.
+
+**Zahid Pashayev** · [LinkedIn](https://www.linkedin.com/in/zahid-pashayev)
