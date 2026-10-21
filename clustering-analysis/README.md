@@ -13,7 +13,7 @@ How do stocks move together during a crisis? This project groups 22 stocks by ho
 ## Data
 
 - **251 trading days** of daily returns for **22 stocks** in 2020
-- **File:** [`daily_stock_returns_2020.dat`](daily_stock_returns_2020.dat)
+- **File:** [`daily_stock_returns_2020.dat`](daily_stock_returns_2020.d)
 
 ## Methods
 
