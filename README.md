@@ -7,8 +7,8 @@ Data analysis and econometrics projects in R, built during my MSc in Finance and
 | Project | Description |
 |---|---|
 | [AEX Volatility GARCH](aex-volatility-garch) | Models the volatility of the Dutch AEX index (2010–2023) and shows that bad news raises volatility more than good news. |
-| [Stock Volatility](Stock%20Volatility) | Analysis and forecast of stock volatility. |
-| [Clustering Analysis](Clustering%20Analysis) | Clustering analysis of stock data. |
+| [Stock Volatility](stock-volatility) | Analysis and forecast of stock volatility. |
+| [Clustering Analysis](clustering-analysis) | Clustering analysis of stock data. |
 
 Each folder has its own README with findings, code and data.
 
